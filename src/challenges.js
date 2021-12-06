@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  // seu código aqui
   return param1 && param2;
 
   // if(param1 && param2) {
@@ -14,20 +13,18 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(param) {
-  // seu código aqui
-  let result = param.split(' ');
-  return result;
+  return param.split(' ');
+  // let result = param.split(' ');
+  // return result;
 }
 
 // Desafio 4
 function concatName(param) {
-  // seu código aqui
   let result = param;
   return `${result[result.length - 1]}, ${result[0]}`;
 
@@ -39,8 +36,6 @@ function concatName(param) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
-
   let result = wins * 3 + ties;
   return result;
 
@@ -49,12 +44,19 @@ function footballPoints(wins, ties) {
 
   // let result = (victory * 3) + (drawn * 1);
   // return result;
-
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(param) {
+  let max = Math.max.apply({}, param);
+  let result = 0;
+  for (let index = 0; index < param.length; index += 1) {
+    if (max === param[index]) {
+      result += 1;
+    }
+  }
+  return result;
 }
 
 // Desafio 7
